@@ -52,7 +52,7 @@ main{max-width:1040px;margin:0 auto;padding:0 32px 96px}
 .hero-text{max-width:620px}
 .lede{margin:0 0 16px;font-size:19px;line-height:1.6;text-wrap:pretty}
 .lede.dim{margin-bottom:28px;color:color-mix(in srgb,var(--text) 78%,transparent)}
-.logos{margin-top:8px;width:100%;max-width:480px;height:auto;display:block;opacity:.75;filter:saturate(.6) contrast(.85)}
+.logos{margin-top:14px;width:100%;max-width:560px;height:auto;display:block;opacity:.75;filter:saturate(.6) contrast(.85)}
 
 .split{display:grid;grid-template-columns:200px 1fr;gap:40px;padding-top:72px;scroll-margin-top:80px}
 .split.first{padding-top:40px}
@@ -87,10 +87,12 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
 
 @media (max-width:860px){.split{grid-template-columns:1fr;gap:8px}.section-h{position:static}}
 @media (max-width:700px){
-  .hero{grid-template-columns:1fr;gap:28px;padding-top:44px}
-  nav{padding:12px 22px;gap:16px 18px}
-  nav a,nav button{font-size:14px}
-  .brand{font-size:24px}
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:36px}
+  .hero img:first-child{margin:0 auto}
+  nav{padding:12px 22px;gap:12px 18px;align-items:center}
+  nav a,nav button{font-size:15px}
+  .brand{flex:0 0 100%;margin-right:0;font-size:26px;padding-bottom:10px;border-bottom:1px solid var(--divider)}
+  .logos{margin:18px auto 0}
   main{padding-left:22px;padding-right:22px}
   .lede{font-size:17px}
   .ptitle{font-size:19px}
