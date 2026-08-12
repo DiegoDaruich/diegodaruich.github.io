@@ -64,3 +64,19 @@ Everything is driven by the variables in `:root` at the top of the `<style>` blo
 ## Email
 
 The address is not written anywhere in the HTML. It's assembled by the small script at the bottom of the file when someone clicks the link, so scrapers find nothing to harvest. If the address ever changes, edit that script.
+
+## Google Analytics
+
+The GA4 tag is in the `<head>` of `index.html`. **Replace both occurrences of `G-XXXXXXXXXX` with your Measurement ID** (GA admin → Data Streams → your web stream; it looks like `G-ABC123DEF4`).
+
+Weebly injected its own tag, which is why tracking stopped when you moved.
+
+### Custom events sent
+
+| Event | When | Parameters |
+| --- | --- | --- |
+| `paper_link_click` | Any Paper / Slides / BibTeX / press link | `paper_title`, `link_type`, `link_url` |
+| `cv_click` | The CV button (header or footer) | `link_url` |
+| `abstract_open` | Someone expands an abstract | `paper_title` |
+
+To see `paper_title` and `link_type` as columns in reports, register them once as custom dimensions: GA4 → **Admin → Custom definitions → Create custom dimension**, scope *Event*, event parameter `paper_title` (repeat for `link_type`). Data appears in reports ~24h later; **Realtime → Events** shows them immediately for testing.

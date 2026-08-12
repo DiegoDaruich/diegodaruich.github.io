@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Analytics (GA4) — replace G-G6PYPWBFWG with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6PYPWBFWG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G6PYPWBFWG');
+</script>
 <title>Diego Daruich</title>
 <meta name="description" content="Diego Daruich — Assistant Professor of Finance and Business Economics at USC Marshall. Research in macroeconomics and labor economics.">
 <meta property="og:title" content="Diego Daruich">
@@ -329,6 +337,41 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
 
 </div>
 <script>
+
+  // Track which paper / CV link was clicked.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a || typeof gtag !== 'function') return;
+    var url = a.href;
+    if (url.indexOf(location.origin) === 0 && url.indexOf('#') > -1) return;
+
+    var entry = a.closest('article, .entry');
+    var titleEl = entry && entry.querySelector('.ptitle');
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    var label = a.textContent.trim();
+
+    if (a.classList.contains('cv') || a.classList.contains('footlink')) {
+      gtag('event', 'cv_click', { link_url: url });
+      return;
+    }
+    if (a.classList.contains('titlelink')) { label = 'Title'; }
+
+    gtag('event', 'paper_link_click', {
+      paper_title: title || label,
+      link_type: label,
+      link_url: url
+    });
+  });
+
+  document.querySelectorAll('details').forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open || typeof gtag !== 'function') return;
+      var t = d.closest('article, .entry');
+      var el = t && t.querySelector('.ptitle');
+      gtag('event', 'abstract_open', { paper_title: el ? el.textContent.trim() : '' });
+    });
+  });
+
   // Email is assembled at runtime so crawlers find no address in the source.
   document.querySelectorAll('[data-mail]').forEach(function (b) {
     b.addEventListener('click', function () {
