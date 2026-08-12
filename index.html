@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diego Daruich</title>
+<meta name="description" content="Diego Daruich — Assistant Professor of Finance and Business Economics at USC Marshall. Research in macroeconomics and labor economics.">
+<meta property="og:title" content="Diego Daruich">
+<meta property="og:description" content="Assistant Professor at USC Marshall. Macroeconomics and labor economics.">
+<meta property="og:url" content="https://www.diegodaruich.com/">
+<meta property="og:image" content="https://www.diegodaruich.com/images/profile.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#fbf8f2; --surface:#f4eee3; --text:#1e1c1a;
+  --accent:#a8552a; --accent-600:#8f4a22; --accent-700:#7a3f1d; --accent-800:#5f3116;
+  --sage-100:#e3e7d7; --sage-200:#d3dac2; --sage-900:#272e1b;
+  --divider:rgba(30,28,26,0.16);
+  --heading:"EB Garamond",Georgia,serif; --body:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-800);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent-600)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+img{max-width:100%}
+
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--divider)}
+nav{max-width:1040px;margin:0 auto;padding:14px 32px;display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.brand{font-family:var(--heading);font-weight:600;font-size:27px;letter-spacing:-.005em;color:var(--text);text-decoration:none;margin-right:auto}
+.navlink{font-size:15px;color:var(--text);text-decoration:none}
+.navlink:hover{color:var(--accent-700)}
+.cv{font-size:16px;font-family:var(--heading);padding:5px 17px;border-radius:999px;background:var(--accent);color:var(--bg);text-decoration:none}
+.cv:hover{background:var(--accent-600);color:var(--bg)}
+.mail{font:inherit;font-size:15px;color:var(--text);background:none;border:0;padding:0;cursor:pointer}
+.mail:hover{color:var(--accent-700)}
+.mail.underline{text-decoration:underline;text-underline-offset:3px}
+.mail span{unicode-bidi:bidi-override;direction:rtl}
+
+main{max-width:1040px;margin:0 auto;padding:0 32px 96px}
+.hero{display:grid;grid-template-columns:248px 1fr;gap:52px;align-items:start;padding:72px 0 64px}
+.hero img:first-child{width:248px;height:248px;object-fit:cover;border-radius:999px;display:block;filter:saturate(.6) contrast(.85) brightness(1.1)}
+.hero-text{max-width:620px}
+.lede{margin:0 0 16px;font-size:19px;line-height:1.6;text-wrap:pretty}
+.lede.dim{margin-bottom:28px;color:color-mix(in srgb,var(--text) 78%,transparent)}
+.logos{margin-top:8px;width:100%;max-width:480px;height:auto;display:block;opacity:.75;filter:saturate(.6) contrast(.85)}
+
+.split{display:grid;grid-template-columns:200px 1fr;gap:40px;padding-top:72px;scroll-margin-top:80px}
+.split.first{padding-top:40px}
+.section-h{font-family:var(--heading);font-weight:600;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-800);margin:0;position:sticky;top:88px;align-self:start}
+.entries{display:flex;flex-direction:column}
+.entry{padding:26px 0;border-top:1px solid var(--divider)}
+.entry.last{border-bottom:1px solid var(--divider)}
+.ptitle{font-family:var(--body);font-weight:600;font-size:20px;line-height:1.34;letter-spacing:-.01em;margin:0 0 8px;text-wrap:pretty}
+.titlelink{color:inherit;text-decoration:none;border-bottom:1px solid var(--accent)}
+.titlelink:hover{color:var(--accent-800)}
+.meta{margin:0 0 14px;font-size:16px;color:color-mix(in srgb,var(--text) 72%,transparent)}
+.meta.nb{margin:0}
+.links{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.lnk{font-size:14px;padding:5px 15px;border-radius:999px;border:1px solid var(--divider);color:var(--text);text-decoration:none}
+.lnk:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--text)}
+.lnk.press{border-color:transparent;background:var(--sage-100);color:var(--sage-900)}
+.lnk.press:hover{background:var(--sage-200);color:var(--sage-900)}
+details{margin-top:14px}
+summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--accent-800)}
+summary::-webkit-details-marker{display:none}
+.caret{display:inline-block;transition:transform .15s ease}
+details[open] .caret{transform:rotate(90deg)}
+.abstract{margin:12px 0 0;max-width:62ch;font-size:16px;line-height:1.65;color:color-mix(in srgb,var(--text) 82%,transparent);text-wrap:pretty}
+.video{max-width:560px;aspect-ratio:16/9;border-radius:28px;overflow:hidden;box-shadow:0 2px 8px rgba(30,28,26,.09)}
+.video iframe{width:100%;height:100%;border:0;display:block}
+
+footer{border-top:1px solid var(--divider);background:var(--surface)}
+.foot-inner{max-width:1040px;margin:0 auto;padding:40px 32px;display:flex;gap:24px;align-items:baseline;flex-wrap:wrap}
+.foot-name{font-family:var(--heading);font-size:21px;margin-right:auto}
+.footlink{font-size:15px;color:var(--text)}
+.footnote{font-size:15px;color:color-mix(in srgb,var(--text) 55%,transparent)}
+
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:8px}.section-h{position:static}}
+@media (max-width:700px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:44px}
+  nav{padding:12px 22px;gap:16px 18px}
+  nav a,nav button{font-size:14px}
+  .brand{font-size:24px}
+  main{padding-left:22px;padding-right:22px}
+  .lede{font-size:17px}
+  .ptitle{font-size:19px}
+  .section-h{font-size:16px}
+  .foot-inner{padding:32px 22px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <nav>
+      <a href="#top" class="brand">Diego Daruich</a>
+      <a href="#publications" class="navlink">Publications</a>
+      <a href="#working-papers" class="navlink">Working Papers</a>
+      <a href="#discussions" class="navlink">Discussions</a>
+      <button type="button" class="mail" data-mail=""><span style="unicode-bidi: bidi-override; direction: rtl;">ude.csu@hciurad</span></button>
+      <a href="https://www.dropbox.com/scl/fi/yuvn5negi260joeth6136/Daruich_CV.pdf?rlkey=fnw6gzjcglcf12n78wlmggtkh&dl=0" class="cv">CV</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <img src="images/profile.png" alt="Diego Daruich" width="248" height="248">
+      <div class="hero-text">
+                <p class="lede">Assistant Professor of Finance and Business Economics at the University of Southern California, Marshall School of Business.</p>
+        <p class="lede dim">My research is in macroeconomics and labor economics, with a particular interest in human capital, education, and labor market policies.</p>
+        <img class="washed" src="images/universities.png" alt="USC Marshall, New York University, CEMFI, Universidad Torcuato di Tella" class="logos">
+      </div>
+    </section>
+
+    <section id="publications" class="split first">
+      <h2 class="section-h">Publications</h2>
+      <div class="entries">
+
+        <article class="entry">
+          <h3 class="ptitle">The Macroeconomic Consequences of Early Childhood Development Policies</h3>
+          <p class="meta"><em>Journal of Political Economy</em>, 2026</p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/99gktmu9rvhg8q6zffppe/Daruich_JMP.pdf?rlkey=179s9zv8gdnzu7dkqmy5y3fkk&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/scl/fi/hwekw7d1vqzmv5ezv3ek7/Daruich_JMP_Slides.pdf?rlkey=62sem8ivffvnqi5jg45n4x1te&dl=0" class="lnk">Slides</a>
+            <a href="https://www.dropbox.com/scl/fi/0vglcboom9uh6qv3fqlto/bibtex_ecd.txt?rlkey=7duig078nn3soqx02avc8mxye&st=gv4pdlcp&dl=0" class="lnk">BibTeX</a>
+            <a href="https://www.nytimes.com/2021/06/23/opinion/education-poverty-intervention.html?smid=url-share" class="lnk press">New York Times</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">A general-equilibrium heterogeneous-agent model with parental investment in children is used to evaluate early childhood development policies. Accounting for the equilibrium response of wages, taxes, and parental behavior substantially changes the measured returns to such interventions relative to partial-equilibrium estimates.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">An Equilibrium Analysis of the Effects of Neighborhood-based Interventions on Children</h3>
+          <p class="meta"><em>American Economic Review</em>, 2025 · with <a href="https://www.ericchyn.com/">Eric Chyn</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/14xge8o3hh4cius5avkrn/Chyn_Daruich_Equilibrium_Effects_of_Neighborhood_Policies.pdf?rlkey=hvnknylryvwkgxxsg1r5cozcs&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/scl/fi/ilw007xmxpl65xv3jf30r/Chyn_Daruich_Neighborhood_Policies_Slides.pdf?rlkey=tyls0s4svoxsoputp3ltlqbv5&st=olvaz5ee&dl=0" class="lnk">Slides</a>
+            <a href="https://www.dropbox.com/scl/fi/yf5zvaxcqg6r1nkov25dp/Chyn_Daruich_bibtex.txt?rlkey=wmv2m59rq7740c4s0pre26vzu&st=1b27gbxs&dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Moving children to better neighborhoods raises their long-run outcomes, but scaling such programs changes neighborhood composition, house prices, and school quality. We build a spatial equilibrium model with intergenerational human capital to quantify how large-scale neighborhood interventions differ from their small-scale experimental counterparts.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">Universal Basic Income: A Dynamic Assessment</h3>
+          <p class="meta"><em>American Economic Review</em>, 2024 · with <a href="https://sites.google.com/site/raquelfernandezsite/">Raquel Fernández</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/vo0yfy21bt531e74pqebc/DF_UBI.pdf?rlkey=6jr94wbp4c93ffkq87lrpzkfh&st=6ujjtwt4&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/s/mqn145cfvhrmbcr/UBI_Slides.pdf?dl=0" class="lnk">Slides</a>
+            <a href="https://www.dropbox.com/s/n880shps25lk402/bibtex_UBI.txt?dl=0" class="lnk">BibTeX</a>
+            <a href="https://www.npr.org/2021/03/23/980234484/examing-the-stockton-income-experiment" class="lnk press">NPR</a>
+            <a href="https://ssir.org/articles/entry/universal-basic-income-study" class="lnk press">Stanford Social Innovation Review</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">We evaluate universal basic income in a general-equilibrium life-cycle model with intergenerational linkages, endogenous education, and labor supply. Short-run welfare gains are very different from long-run ones once human capital accumulation and the tax burden required to finance the transfer are taken into account.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">The Effects of Partial Employment Protection Reforms: Evidence from Italy</h3>
+          <p class="meta"><em>Review of Economic Studies</em>, 2023 · with <a href="https://sites.google.com/site/sabrinadiaddario/">Sabrina Di Addario</a> and <a href="https://sites.google.com/site/raffaelesaggio/">Raffaele Saggio</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/0n1uy6n7jrqxlb3q5dail/DDS_Restud_2023.pdf?rlkey=o3c1u8177vpg85h0b464bhhsr&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/s/aawv4nc4zfkldg0/bibtex_temp.txt?dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Using Italian administrative matched employer-employee data and a reform that liberalized temporary contracts, we study how partial employment protection reform reshapes hiring, worker turnover, and the allocation of workers across firms.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">Macroeconomic Implications of Uniform Pricing</h3>
+          <p class="meta"><em>American Economic Journal: Macroeconomics</em>, 2023 · with <a href="http://www.juliankozlowski.com/">Julian Kozlowski</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/s/sm982aoheq035ax/DK_prices_AEJMacro_Main.pdf?dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/s/9dtktq7qwqkn9pi/DK_prices_AEJMacro_OnlineAppendix.pdf?dl=0" class="lnk">Online Appendix</a>
+            <a href="https://www.dropbox.com/s/hm8jx8nyalhal6s/bibtex_uniform.txt?dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Retail chains charge nearly identical prices across stores in very different local markets. We study the aggregate consequences of this uniform pricing practice for the transmission of local shocks, regional real income differences, and the pass-through of costs to consumers.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">Explaining Intergenerational Mobility: The Role of Fertility and Family Transfers</h3>
+          <p class="meta"><em>Review of Economic Dynamics</em>, 2020 · with <a href="http://www.juliankozlowski.com/">Julian Kozlowski</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/5kv1iy3ir5kpzl5y7u0yw/DK_RED_2020.pdf?rlkey=t4hk3ut8c2mko9b62krdu8h6a&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/s/136kahfjoischh4/bibtex_fert.txt?dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Differential fertility and inter-vivos transfers are quantitatively important for intergenerational income persistence. We discipline a life-cycle model with family decisions to assess how much of observed mobility each channel accounts for.</p>
+          </details>
+        </article>
+
+        <article class="entry last">
+          <h3 class="ptitle">The Surprising Instability of Export Specializations</h3>
+          <p class="meta"><em>Journal of Development Economics</em>, 2019 · with <a href="http://williameasterly.org/">William Easterly</a> and <a href="http://people.virginia.edu/~ar7kf/">Ariell Reshef</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/wm2dnsmgx7f9uahv5mx57/DER_JDE_2019.pdf?rlkey=etc0ka57e5mcuis1fmwinb6x7&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/s/aqw0knze0el8h3a/bibtex_exports.txt?dl=0" class="lnk">BibTeX</a>
+            <a href="http://voxeu.org/article/surprising-prevalence-surprises-export-specialisation" class="lnk press">VoxEU</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Countries' top export products turn over far more often than standard theories of comparative advantage would predict. We document the extent of this churning and show that big export successes are largely unpredictable from prior specialization patterns.</p>
+          </details>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="working-papers" class="split">
+      <h2 class="section-h">Working Papers</h2>
+      <div class="entries">
+
+        <article class="entry">
+          <h3 class="ptitle">The Macroeconomics of Intergenerational Mental Health Dynamics</h3>
+          <p class="meta">with <a href="https://boazabramson.github.io/">Boaz Abramson</a>, <a href="https://jobboerma.com/">Job Boerma</a> and <a href="https://economics.yale.edu/people/aleh-tsyvinski">Aleh Tsyvinski</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/n1zseyd13drcvrhe1mvqe/ABDT_macro_childmental.pdf?rlkey=zncajac4cj6yqpgue5n69lyvx&st=0fk3h4vo&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/scl/fi/85lmcdpq4r6njx61932qw/bibtex_childmental.txt?rlkey=swvx1qmlwt033c9bsf92z9cs3&st=8lsfpyzk&dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Child mental health is transmitted across generations and interacts with parental resources and investment. We build and estimate a macroeconomic model of these dynamics to quantify their aggregate and distributional consequences, and to evaluate treatment policies.</p>
+          </details>
+        </article>
+
+        <article class="entry">
+          <h3 class="ptitle">The Consequences of Domestic Outsourcing: Evidence from Italian Administrative Data</h3>
+          <p class="meta">with Martino Kuntze, <a href="https://pascuel.github.io/">Pascuel Plotkin</a> and <a href="https://sites.google.com/site/raffaelesaggio/">Raffaele Saggio</a></p>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/gp6wtqn9efeeubbeza8aj/DKPS_Outsourcing.pdf?rlkey=e3ok68v6zsmiuu9ycj2u7ld18&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/scl/fi/pkiqm1coi027ovccb6d8p/DKPS_Outsourcing_bibtex.txt?rlkey=lpgajnfj8wh7ga0aoz583ggrz&dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Using Italian matched employer-employee records, we trace workers whose jobs are outsourced to service providers and measure the resulting effects on wages, job stability, and firm-level pay policies.</p>
+          </details>
+        </article>
+
+        <article class="entry last">
+          <h3 class="ptitle">Zoning Out Opportunities: The Intergenerational Impact of Housing Supply Restrictions</h3>
+          <div class="links">
+            <a href="https://www.dropbox.com/scl/fi/yy7fv8eq5vq2r42uhbv0z/Daruich_Zoning_Out_Opportunities.pdf?rlkey=wy1s8o495y873fhw0z0exh8ty&dl=0" class="lnk">Paper</a>
+            <a href="https://www.dropbox.com/scl/fi/6ml65iku5gf7mjwjp9wip/Daruich_Zoning_Slides.pdf?rlkey=ldrmv0o82045q75un7bm2kqq1&st=ko1js4vq&dl=0" class="lnk">Slides</a>
+            <a href="https://www.dropbox.com/scl/fi/s428h6ca4ama8pmmx5cq2/Daruich_Zoning_bibtex.txt?rlkey=984sp5sklyx0q58yvytkmw42j&dl=0" class="lnk">BibTeX</a>
+          </div>
+          <details>
+            <summary><span class="caret">›</span>Abstract</summary>
+            <p class="abstract">Housing supply restrictions price lower-income families out of high-opportunity neighborhoods. I quantify how much of the intergenerational persistence of income can be attributed to zoning, and what relaxing it would do to children's long-run outcomes.</p>
+          </details>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="split">
+      <h2 class="section-h">Work in Progress</h2>
+      <div class="entries">
+        <article class="entry">
+          <h3 class="ptitle">Inequality Dynamics: A Life-Cycle Portfolio Model Perspective</h3>
+          <p class="meta nb">with <a href="http://www.juliankozlowski.com/">Julian Kozlowski</a></p>
+        </article>
+        <article class="entry">
+          <h3 class="ptitle">Does It Matter Why Parents Care? Altruism, Warm Glow, and Policy Evaluation</h3>
+          <p class="meta nb">with <a href="https://www.ansonzhou.com/">Anson Zhou</a></p>
+        </article>
+        <article class="entry">
+          <h3 class="ptitle">Optimal Intergenerational Policy with and without Government Debt</h3>
+          <p class="meta nb">with <a href="https://dcarrollecon.github.io/">Daniel Carroll</a> and <a href="https://avdluduvice.github.io/">André Luduvice</a></p>
+        </article>
+        <article class="entry last">
+          <h3 class="ptitle">The Price of Progress: Technological Change and Human Capital Dynamics</h3>
+          <p class="meta nb">with <a href="https://www.josephlyonmullins.com/">Joseph Mullins</a> and <a href="https://sites.google.com/view/joseph-pedtke">Joseph Pedtke</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="discussions" class="split">
+      <h2 class="section-h">Selected Discussions</h2>
+      <div class="entries">
+        <article class="entry">
+          <h3 class="ptitle"><a href="https://www.dropbox.com/scl/fi/5r5oas1udm6hihkdjed54/Discussion_Daruich_HOPE_NBER.pdf?rlkey=v1mboa8p7dml2jmyrfzglg5xt&dl=0" class="titlelink">Creating High-Opportunity Neighborhoods: Evidence from the HOPE VI Program</a></h3>
+          <p class="meta nb"><em>NBER Summer Institute, Urban Economics</em>, 2026 · by Chetty, Diamond, Foster, Katz, Porter, Staiger and Tach</p>
+        </article>
+        <article class="entry last">
+          <h3 class="ptitle"><a href="https://www.dropbox.com/scl/fi/t5as8f57j9aea42w5weo6/Discussion_Daruich_NBER_MacroAnnual_2026.pdf?rlkey=t3tq4x8o7g8s7sk5t274qv15m&st=afaf9nik&dl=0" class="titlelink">The Macroeconomic Effects of Neighborhood Policies: A Dynamic Analysis</a></h3>
+          <p class="meta nb"><a href="https://www.dropbox.com/scl/fi/vc1fft3r2dm79ojq5sqs4/Daruich_MacroAnnual_2026.pdf?rlkey=px97z43ate4c6gh2laijcy0qk&st=cjr8acyt&dl=0"><em>NBER Macroeconomics Annual</em>, 2026</a> · by Fogli, Guerrieri, Ponder and Prato</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split">
+      <h2 class="section-h">Older Research</h2>
+      <div class="entry">
+        <h3 class="ptitle"><a href="https://www.diegodaruich.com/uploads/3/8/1/2/38127151/productivity_losses_from_the_attention_to_aggregate_uncertainty_jul14.pdf" class="titlelink">Productivity Losses from Attention to Aggregate Uncertainty</a></h3>
+        <p class="meta">Revised and extended version of the master's thesis presented at CEMFI.</p>
+        <p class="meta">Tato Bores, an Argentine comedian, explains the idea in 1964 (in Spanish).</p>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/NHrZVfx6o_U?modestbranding=1&amp;rel=0&amp;cc_load_policy=0" title="Tato Bores" allowfullscreen="allowfullscreen" style="width: 100%; height: 100%; border: 0; display: block;"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+      <div class="foot-inner">
+      <span class="foot-name">Diego Daruich</span>
+      <button type="button" class="mail underline" data-mail=""><span style="unicode-bidi: bidi-override; direction: rtl;">ude.csu@hciurad</span></button>
+      <a href="https://www.dropbox.com/scl/fi/yuvn5negi260joeth6136/Daruich_CV.pdf?rlkey=fnw6gzjcglcf12n78wlmggtkh&dl=0" class="footlink">CV</a>
+      <span class="footnote">USC Marshall School of Business</span>
+    </div>
+  </footer>
+
+</div>
+<script>
+  // Email is assembled at runtime so crawlers find no address in the source.
+  document.querySelectorAll('[data-mail]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      window.location.href = 'mail' + 'to:' + ['daruich', String.fromCharCode(64), 'usc', '.', 'edu'].join('');
+    });
+  });
+</script>
+</body>
+</html>
