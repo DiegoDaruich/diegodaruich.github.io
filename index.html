@@ -74,11 +74,12 @@ main{max-width:1040px;margin:0 auto;padding:0 32px 96px}
 .lnk:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--text)}
 .lnk.press{border-color:transparent;background:var(--sage-100);color:var(--sage-900)}
 .lnk.press:hover{background:var(--sage-200);color:var(--sage-900)}
-details{margin-top:14px}
-summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--accent-800)}
+.abs-toggle{font:inherit;font-size:14px;display:inline-flex;align-items:center;gap:6px;padding:5px 15px 5px 13px;background:none;color:var(--accent-800);cursor:pointer}
+.abs-toggle[aria-expanded="true"]{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.abs-toggle[aria-expanded="true"] .caret{transform:rotate(90deg)}
 summary::-webkit-details-marker{display:none}
 .caret{display:inline-block;transition:transform .15s ease}
-details[open] .caret{transform:rotate(90deg)}
+.abstract[hidden]{display:none}
 .abstract{margin:12px 0 0;max-width:62ch;font-size:16px;line-height:1.65;color:color-mix(in srgb,var(--text) 82%,transparent);text-wrap:pretty}
 .video{max-width:560px;aspect-ratio:16/9;border-radius:28px;overflow:hidden;box-shadow:0 2px 8px rgba(30,28,26,.09)}
 .video iframe{width:100%;height:100%;border:0;display:block}
@@ -141,99 +142,85 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
           <h3 class="ptitle">The Macroeconomic Consequences of Early Childhood Development Policies</h3>
           <p class="meta"><em>Journal of Political Economy</em>, 2026</p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/99gktmu9rvhg8q6zffppe/Daruich_JMP.pdf?rlkey=179s9zv8gdnzu7dkqmy5y3fkk&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/scl/fi/hwekw7d1vqzmv5ezv3ek7/Daruich_JMP_Slides.pdf?rlkey=62sem8ivffvnqi5jg45n4x1te&dl=0" target="_blank" rel="noopener" class="lnk">Slides</a>
             <a href="https://www.dropbox.com/scl/fi/0vglcboom9uh6qv3fqlto/bibtex_ecd.txt?rlkey=7duig078nn3soqx02avc8mxye&st=gv4pdlcp&dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
             <a href="https://www.nytimes.com/2021/06/23/opinion/education-poverty-intervention.html?smid=url-share" target="_blank" rel="noopener" class="lnk press">New York Times</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">A general-equilibrium heterogeneous-agent model with parental investment in children is used to evaluate early childhood development policies. Accounting for the equilibrium response of wages, taxes, and parental behavior substantially changes the measured returns to such interventions relative to partial-equilibrium estimates.</p>
-          </details>
+            <p class="abstract" hidden>A general-equilibrium heterogeneous-agent model with parental investment in children is used to evaluate early childhood development policies. Accounting for the equilibrium response of wages, taxes, and parental behavior substantially changes the measured returns to such interventions relative to partial-equilibrium estimates.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">An Equilibrium Analysis of the Effects of Neighborhood-based Interventions on Children</h3>
           <p class="meta"><em>American Economic Review</em>, 2025 · with <a href="https://www.ericchyn.com/" target="_blank" rel="noopener">Eric Chyn</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/14xge8o3hh4cius5avkrn/Chyn_Daruich_Equilibrium_Effects_of_Neighborhood_Policies.pdf?rlkey=hvnknylryvwkgxxsg1r5cozcs&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/scl/fi/ilw007xmxpl65xv3jf30r/Chyn_Daruich_Neighborhood_Policies_Slides.pdf?rlkey=tyls0s4svoxsoputp3ltlqbv5&st=olvaz5ee&dl=0" target="_blank" rel="noopener" class="lnk">Slides</a>
             <a href="https://www.dropbox.com/scl/fi/yf5zvaxcqg6r1nkov25dp/Chyn_Daruich_bibtex.txt?rlkey=wmv2m59rq7740c4s0pre26vzu&st=1b27gbxs&dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Moving children to better neighborhoods raises their long-run outcomes, but scaling such programs changes neighborhood composition, house prices, and school quality. We build a spatial equilibrium model with intergenerational human capital to quantify how large-scale neighborhood interventions differ from their small-scale experimental counterparts.</p>
-          </details>
+            <p class="abstract" hidden>Moving children to better neighborhoods raises their long-run outcomes, but scaling such programs changes neighborhood composition, house prices, and school quality. We build a spatial equilibrium model with intergenerational human capital to quantify how large-scale neighborhood interventions differ from their small-scale experimental counterparts.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">Universal Basic Income: A Dynamic Assessment</h3>
           <p class="meta"><em>American Economic Review</em>, 2024 · with <a href="https://sites.google.com/site/raquelfernandezsite/" target="_blank" rel="noopener">Raquel Fernández</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/vo0yfy21bt531e74pqebc/DF_UBI.pdf?rlkey=6jr94wbp4c93ffkq87lrpzkfh&st=6ujjtwt4&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/s/mqn145cfvhrmbcr/UBI_Slides.pdf?dl=0" target="_blank" rel="noopener" class="lnk">Slides</a>
             <a href="https://www.dropbox.com/s/n880shps25lk402/bibtex_UBI.txt?dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
             <a href="https://www.npr.org/2021/03/23/980234484/examing-the-stockton-income-experiment" target="_blank" rel="noopener" class="lnk press">NPR</a>
             <a href="https://ssir.org/articles/entry/universal-basic-income-study" target="_blank" rel="noopener" class="lnk press">Stanford Social Innovation Review</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">We evaluate universal basic income in a general-equilibrium life-cycle model with intergenerational linkages, endogenous education, and labor supply. Short-run welfare gains are very different from long-run ones once human capital accumulation and the tax burden required to finance the transfer are taken into account.</p>
-          </details>
+            <p class="abstract" hidden>We evaluate universal basic income in a general-equilibrium life-cycle model with intergenerational linkages, endogenous education, and labor supply. Short-run welfare gains are very different from long-run ones once human capital accumulation and the tax burden required to finance the transfer are taken into account.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">The Effects of Partial Employment Protection Reforms: Evidence from Italy</h3>
           <p class="meta"><em>Review of Economic Studies</em>, 2023 · with <a href="https://sites.google.com/site/sabrinadiaddario/" target="_blank" rel="noopener">Sabrina Di Addario</a> and <a href="https://sites.google.com/site/raffaelesaggio/" target="_blank" rel="noopener">Raffaele Saggio</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/0n1uy6n7jrqxlb3q5dail/DDS_Restud_2023.pdf?rlkey=o3c1u8177vpg85h0b464bhhsr&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/s/aawv4nc4zfkldg0/bibtex_temp.txt?dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Using Italian administrative matched employer-employee data and a reform that liberalized temporary contracts, we study how partial employment protection reform reshapes hiring, worker turnover, and the allocation of workers across firms.</p>
-          </details>
+            <p class="abstract" hidden>Using Italian administrative matched employer-employee data and a reform that liberalized temporary contracts, we study how partial employment protection reform reshapes hiring, worker turnover, and the allocation of workers across firms.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">Macroeconomic Implications of Uniform Pricing</h3>
           <p class="meta"><em>American Economic Journal: Macroeconomics</em>, 2023 · with <a href="http://www.juliankozlowski.com/" target="_blank" rel="noopener">Julian Kozlowski</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/s/sm982aoheq035ax/DK_prices_AEJMacro_Main.pdf?dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/s/9dtktq7qwqkn9pi/DK_prices_AEJMacro_OnlineAppendix.pdf?dl=0" target="_blank" rel="noopener" class="lnk">Online Appendix</a>
             <a href="https://www.dropbox.com/s/hm8jx8nyalhal6s/bibtex_uniform.txt?dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Retail chains charge nearly identical prices across stores in very different local markets. We study the aggregate consequences of this uniform pricing practice for the transmission of local shocks, regional real income differences, and the pass-through of costs to consumers.</p>
-          </details>
+            <p class="abstract" hidden>Retail chains charge nearly identical prices across stores in very different local markets. We study the aggregate consequences of this uniform pricing practice for the transmission of local shocks, regional real income differences, and the pass-through of costs to consumers.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">Explaining Intergenerational Mobility: The Role of Fertility and Family Transfers</h3>
           <p class="meta"><em>Review of Economic Dynamics</em>, 2020 · with <a href="http://www.juliankozlowski.com/" target="_blank" rel="noopener">Julian Kozlowski</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/5kv1iy3ir5kpzl5y7u0yw/DK_RED_2020.pdf?rlkey=t4hk3ut8c2mko9b62krdu8h6a&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/s/136kahfjoischh4/bibtex_fert.txt?dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Differential fertility and inter-vivos transfers are quantitatively important for intergenerational income persistence. We discipline a life-cycle model with family decisions to assess how much of observed mobility each channel accounts for.</p>
-          </details>
+            <p class="abstract" hidden>Differential fertility and inter-vivos transfers are quantitatively important for intergenerational income persistence. We discipline a life-cycle model with family decisions to assess how much of observed mobility each channel accounts for.</p>
         </article>
 
         <article class="entry last">
           <h3 class="ptitle">The Surprising Instability of Export Specializations</h3>
           <p class="meta"><em>Journal of Development Economics</em>, 2019 · with <a href="http://williameasterly.org/" target="_blank" rel="noopener">William Easterly</a> and <a href="http://people.virginia.edu/~ar7kf/" target="_blank" rel="noopener">Ariell Reshef</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/wm2dnsmgx7f9uahv5mx57/DER_JDE_2019.pdf?rlkey=etc0ka57e5mcuis1fmwinb6x7&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/s/aqw0knze0el8h3a/bibtex_exports.txt?dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
             <a href="http://voxeu.org/article/surprising-prevalence-surprises-export-specialisation" target="_blank" rel="noopener" class="lnk press">VoxEU</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Countries' top export products turn over far more often than standard theories of comparative advantage would predict. We document the extent of this churning and show that big export successes are largely unpredictable from prior specialization patterns.</p>
-          </details>
+            <p class="abstract" hidden>Countries' top export products turn over far more often than standard theories of comparative advantage would predict. We document the extent of this churning and show that big export successes are largely unpredictable from prior specialization patterns.</p>
         </article>
 
       </div>
@@ -247,39 +234,33 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
           <h3 class="ptitle">The Macroeconomics of Intergenerational Mental Health Dynamics</h3>
           <p class="meta">with <a href="https://boazabramson.github.io/" target="_blank" rel="noopener">Boaz Abramson</a>, <a href="https://jobboerma.com/" target="_blank" rel="noopener">Job Boerma</a> and <a href="https://economics.yale.edu/people/aleh-tsyvinski" target="_blank" rel="noopener">Aleh Tsyvinski</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/n1zseyd13drcvrhe1mvqe/ABDT_macro_childmental.pdf?rlkey=zncajac4cj6yqpgue5n69lyvx&st=0fk3h4vo&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/scl/fi/85lmcdpq4r6njx61932qw/bibtex_childmental.txt?rlkey=swvx1qmlwt033c9bsf92z9cs3&st=8lsfpyzk&dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Child mental health is transmitted across generations and interacts with parental resources and investment. We build and estimate a macroeconomic model of these dynamics to quantify their aggregate and distributional consequences, and to evaluate treatment policies.</p>
-          </details>
+            <p class="abstract" hidden>Child mental health is transmitted across generations and interacts with parental resources and investment. We build and estimate a macroeconomic model of these dynamics to quantify their aggregate and distributional consequences, and to evaluate treatment policies.</p>
         </article>
 
         <article class="entry">
           <h3 class="ptitle">The Consequences of Domestic Outsourcing: Evidence from Italian Administrative Data</h3>
           <p class="meta">with Martino Kuntze, <a href="https://pascuel.github.io/" target="_blank" rel="noopener">Pascuel Plotkin</a> and <a href="https://sites.google.com/site/raffaelesaggio/" target="_blank" rel="noopener">Raffaele Saggio</a></p>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/gp6wtqn9efeeubbeza8aj/DKPS_Outsourcing.pdf?rlkey=e3ok68v6zsmiuu9ycj2u7ld18&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/scl/fi/pkiqm1coi027ovccb6d8p/DKPS_Outsourcing_bibtex.txt?rlkey=lpgajnfj8wh7ga0aoz583ggrz&dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Using Italian matched employer-employee records, we trace workers whose jobs are outsourced to service providers and measure the resulting effects on wages, job stability, and firm-level pay policies.</p>
-          </details>
+            <p class="abstract" hidden>Using Italian matched employer-employee records, we trace workers whose jobs are outsourced to service providers and measure the resulting effects on wages, job stability, and firm-level pay policies.</p>
         </article>
 
         <article class="entry last">
           <h3 class="ptitle">Zoning Out Opportunities: The Intergenerational Impact of Housing Supply Restrictions</h3>
           <div class="links">
+              <button type="button" class="lnk abs-toggle" aria-expanded="false"><span class="caret">›</span>Abstract</button>
             <a href="https://www.dropbox.com/scl/fi/yy7fv8eq5vq2r42uhbv0z/Daruich_Zoning_Out_Opportunities.pdf?rlkey=wy1s8o495y873fhw0z0exh8ty&dl=0" target="_blank" rel="noopener" class="lnk">Paper</a>
             <a href="https://www.dropbox.com/scl/fi/6ml65iku5gf7mjwjp9wip/Daruich_Zoning_Slides.pdf?rlkey=ldrmv0o82045q75un7bm2kqq1&st=ko1js4vq&dl=0" target="_blank" rel="noopener" class="lnk">Slides</a>
             <a href="https://www.dropbox.com/scl/fi/s428h6ca4ama8pmmx5cq2/Daruich_Zoning_bibtex.txt?rlkey=984sp5sklyx0q58yvytkmw42j&dl=0" target="_blank" rel="noopener" class="lnk">BibTeX</a>
           </div>
-          <details>
-            <summary><span class="caret">›</span>Abstract</summary>
-            <p class="abstract">Housing supply restrictions price lower-income families out of high-opportunity neighborhoods. I quantify how much of the intergenerational persistence of income can be attributed to zoning, and what relaxing it would do to children's long-run outcomes.</p>
-          </details>
+            <p class="abstract" hidden>Housing supply restrictions price lower-income families out of high-opportunity neighborhoods. I quantify how much of the intergenerational persistence of income can be attributed to zoning, and what relaxing it would do to children's long-run outcomes.</p>
         </article>
 
       </div>
@@ -372,12 +353,17 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
     });
   });
 
-  document.querySelectorAll('details').forEach(function (d) {
-    d.addEventListener('toggle', function () {
-      if (!d.open || typeof gtag !== 'function') return;
-      var t = d.closest('article, .entry');
-      var el = t && t.querySelector('.ptitle');
-      gtag('event', 'abstract_open', { paper_title: el ? el.textContent.trim() : '' });
+  document.querySelectorAll('.abs-toggle').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var panel = b.closest('.links').nextElementSibling;
+      var open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+      if (!open && typeof gtag === 'function') {
+        var t = b.closest('article, .entry');
+        var el = t && t.querySelector('.ptitle');
+        gtag('event', 'abstract_open', { paper_title: el ? el.textContent.trim() : '' });
+      }
     });
   });
 
