@@ -52,7 +52,8 @@ main{max-width:1040px;margin:0 auto;padding:0 32px 96px}
 .hero-text{max-width:620px}
 .lede{margin:0 0 16px;font-size:19px;line-height:1.6;text-wrap:pretty}
 .lede.dim{margin-bottom:28px;color:color-mix(in srgb,var(--text) 78%,transparent)}
-.news{margin:8px 0 0;padding:18px 24px;background:var(--sage-100);color:var(--sage-900);border-radius:20px;font-size:16px;line-height:1.55;text-wrap:pretty}
+.news-list{margin:8px 0 0;display:flex;flex-direction:column;gap:12px}
+.news{margin:0;padding:18px 24px;background:var(--sage-100);color:var(--sage-900);border-radius:20px;font-size:16px;line-height:1.55;text-wrap:pretty}
 .news a{color:var(--sage-900);text-decoration-thickness:1px;text-underline-offset:3px}
 .news a:hover{color:var(--accent-800)}
 .news-label{display:inline-block;font-family:var(--heading);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-right:10px;opacity:.72;vertical-align:1px}
@@ -100,7 +101,7 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
   .logos{margin:18px auto 0}
   main{padding-left:22px;padding-right:22px}
   .lede{font-size:17px}
-  .news{font-size:15px;padding:14px 18px}
+  .news{padding:14px 18px;font-size:15px}
   .ptitle{font-size:19px}
   .section-h{font-size:16px}
   .foot-inner{padding:32px 22px}
@@ -132,7 +133,10 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
       </div>
     </section>
 
-      <p class="news"><span class="news-label">News</span>I will be visiting <a href="https://www.cemfi.es/" target="_blank" rel="noopener">CEMFI</a> from 21 June to 9 July 2027 as a María de Maeztu Visiting Professor. Happy to coordinate visits or seminars elsewhere in Europe around those dates.</p>
+      <div class="news-list">
+        <p class="news"><span class="news-label">News</span>With <a href="https://www.juliankozlowski.com/" target="_blank" rel="noopener">Julian Kozlowski</a> and <a href="https://sites.google.com/site/gustavoventuraeconomics/" target="_blank" rel="noopener">Gustavo Ventura</a>, I am organizing a new RIDGE Workshop on Macroeconomics and Heterogeneity in Montevideo, 14–15 December 2026. <a href="https://ridge.org.uy" target="_blank" rel="noopener">Call for papers</a> — submissions due 15 October.</p>
+        <p class="news"><span class="news-label">News</span>I will be visiting <a href="https://www.cemfi.es/" target="_blank" rel="noopener">CEMFI</a> from 21 June to 9 July 2027 as a María de Maeztu Visiting Professor. Happy to coordinate visits or seminars elsewhere in Europe around those dates.</p>
+      </div>
 
     <section id="publications" class="split first">
       <h2 class="section-h">Publications</h2>
