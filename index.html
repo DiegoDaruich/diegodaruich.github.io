@@ -134,8 +134,8 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
     </section>
 
       <div class="news-list">
-        <p class="news"><span class="news-label">News</span>I am organizing a Workshop on Families and Intergenerational Macroeconomics in Santa Barbara, 21–22 May 2027, bringing together economists studying the role of families in shaping aggregate outcomes. <a href="https://us.list-manage.com/rKCAz7WryZ1?e=125b557754&amp;c2id=e6e4ca4a3dc5d608a722ba7e8c6a2d39" target="_blank" rel="noopener">Call for papers</a>.</p>
-        <p class="news"><span class="news-label">News</span>With <a href="https://www.juliankozlowski.com/" target="_blank" rel="noopener">Julian Kozlowski</a> and <a href="https://sites.google.com/site/gustavoventuraeconomics/" target="_blank" rel="noopener">Gustavo Ventura</a>, I am organizing a new RIDGE Workshop on Macroeconomics and Heterogeneity in Montevideo, 14–15 December 2026. The <a href="https://ridge.org.uy/wp-content/uploads/2026/11/Macroeconomics-and-Heterogeneity-Program.pdf" target="_blank" rel="noopener">final program</a> is now available.</p>
+        <p class="news"><span class="news-label">News</span>I am organizing a Workshop on Families and Intergenerational Macroeconomics in Santa Barbara, 21–22 May 2027, bringing together economists studying the role of families in shaping aggregate outcomes. <a href="https://us.list-manage.com/rKCAz7WryZ1?e=125b557754&amp;c2id=e6e4ca4a3dc5d608a722ba7e8c6a2d39" target="_blank" rel="noopener" data-conference="Families and Intergenerational Macroeconomics 2027">Call for papers</a>.</p>
+        <p class="news"><span class="news-label">News</span>With <a href="https://www.juliankozlowski.com/" target="_blank" rel="noopener">Julian Kozlowski</a> and <a href="https://sites.google.com/site/gustavoventuraeconomics/" target="_blank" rel="noopener">Gustavo Ventura</a>, I am organizing a new RIDGE Workshop on Macroeconomics and Heterogeneity in Montevideo, 14–15 December 2026. The <a href="https://ridge.org.uy/wp-content/uploads/2026/11/Macroeconomics-and-Heterogeneity-Program.pdf" target="_blank" rel="noopener" data-conference="RIDGE Macroeconomics and Heterogeneity 2026">final program</a> is now available.</p>
         <p class="news"><span class="news-label">News</span>I will be visiting <a href="https://www.cemfi.es/" target="_blank" rel="noopener">CEMFI</a> from 21 June to 9 July 2027 as a María de Maeztu Visiting Professor. Happy to coordinate visits or seminars elsewhere in Europe around those dates.</p>
       </div>
 
@@ -333,29 +333,47 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
 </div>
 <script>
 
-  // Track which paper / CV link was clicked.
+  // Classify outbound clicks for GA4 (event names and parameters: see README).
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href]');
     if (!a || typeof gtag !== 'function') return;
     var url = a.href;
     if (url.indexOf(location.origin) === 0 && url.indexOf('#') > -1) return;
-
-    var entry = a.closest('article, .entry');
-    var titleEl = entry && entry.querySelector('.ptitle');
-    var title = titleEl ? titleEl.textContent.trim() : '';
-    var label = a.textContent.trim();
+    var text = a.textContent.trim();
 
     if (a.classList.contains('cv') || a.classList.contains('footlink')) {
       gtag('event', 'cv_click', { link_url: url });
       return;
     }
-    if (a.classList.contains('titlelink')) { label = 'Title'; }
+    if (a.hasAttribute('data-conference')) {
+      gtag('event', 'conference_link_click', {
+        conference: a.getAttribute('data-conference'), link_type: text, link_url: url });
+      return;
+    }
 
-    gtag('event', 'paper_link_click', {
-      paper_title: title || label,
-      link_type: label,
-      link_url: url
-    });
+    var entry = a.closest('article, .entry');
+    if (!entry) {
+      gtag('event', 'outbound_click', { link_text: text, link_url: url });
+      return;
+    }
+    var titleEl = entry.querySelector('.ptitle');
+    var title = titleEl ? titleEl.textContent.trim() : '';
+
+    if (a.closest('#discussions')) {
+      gtag('event', 'discussion_click', {
+        paper_title: title,
+        link_type: a.classList.contains('titlelink') ? 'Discussion' : 'Venue',
+        link_url: url });
+    } else if (a.closest('.meta')) {
+      gtag('event', 'coauthor_click', { coauthor_name: text, paper_title: title, link_url: url });
+    } else if (text === 'Slides') {
+      gtag('event', 'slides_click', { paper_title: title, link_url: url });
+    } else {
+      gtag('event', 'paper_link_click', {
+        paper_title: title,
+        link_type: a.classList.contains('titlelink') ? 'Title' : text,
+        link_url: url });
+    }
   });
 
   document.querySelectorAll('.abs-toggle').forEach(function (b) {

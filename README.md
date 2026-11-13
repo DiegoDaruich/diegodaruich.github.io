@@ -75,8 +75,24 @@ Weebly injected its own tag, which is why tracking stopped when you moved.
 
 | Event | When | Parameters |
 | --- | --- | --- |
-| `paper_link_click` | Any Paper / Slides / BibTeX / press link | `paper_title`, `link_type`, `link_url` |
+| `paper_link_click` | Paper title, Paper / Online Appendix / BibTeX / press pills | `paper_title`, `link_type`, `link_url` |
+| `slides_click` | A Slides pill | `paper_title`, `link_url` |
+| `coauthor_click` | A coauthor name under a paper | `coauthor_name`, `paper_title`, `link_url` |
+| `discussion_click` | A link in Selected Discussions | `paper_title`, `link_type` (`Discussion` or `Venue`), `link_url` |
+| `conference_link_click` | A link carrying `data-conference="…"` (call for papers, program) | `conference`, `link_type`, `link_url` |
+| `outbound_click` | Any other external link (e.g. names or institutions in News) | `link_text`, `link_url` |
 | `cv_click` | The CV button (header or footer) | `link_url` |
-| `abstract_open` | Someone expands an abstract | `paper_title` |
+| `abstract_open` | Someone expands an abstract (not when collapsing it) | `paper_title` |
 
-To see `paper_title` and `link_type` as columns in reports, register them once as custom dimensions: GA4 → **Admin → Custom definitions → Create custom dimension**, scope *Event*, event parameter `paper_title` (repeat for `link_type`). Data appears in reports ~24h later; **Realtime → Events** shows them immediately for testing.
+For a new conference link, add `data-conference="Conference Name Year"` to its `<a>` tag; without it, the click is logged as `outbound_click`.
+
+To see the parameters as columns in reports, register each once as a custom dimension: GA4 → **Admin → Custom definitions → Create custom dimension**, scope *Event*, event parameter `paper_title` (repeat for `link_type`, `coauthor_name`, `conference`, `link_text`). Data appears in reports ~24h later; **Realtime → Events** shows them immediately for testing.
+
+## Private slides page (diegodaruich.com/slides)
+
+`slides/index.html` is a password page for grabbing your slides when you forget a USB drive. The Dropbox link inside it is **encrypted** with your password (AES-256, PBKDF2) — the page source contains no link, so viewing source or the public repo reveals nothing.
+
+- Build or rebuild it with the **Slides page setup** tool (kept outside the website, in the design project). Never commit the password anywhere.
+- Point it at a Dropbox **folder** link so updating slides is just dropping files into that folder.
+- The page is marked `noindex` and isn't linked from the homepage, so search engines skip it.
+- The Dropbox link itself is still a normal share link — anyone who has it can open it, with or without this page.
