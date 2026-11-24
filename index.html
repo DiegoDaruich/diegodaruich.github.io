@@ -51,6 +51,9 @@ main{max-width:1040px;margin:0 auto;padding:0 32px 96px}
 .hero img:first-child{width:248px;height:248px;object-fit:cover;border-radius:999px;display:block;filter:saturate(.6) contrast(.85) brightness(1.1)}
 .hero-text{max-width:620px}
 .lede{margin:0 0 16px;font-size:19px;line-height:1.6;text-wrap:pretty}
+.roles{padding:0;list-style:none}
+.roles .role{font-weight:600}
+.roles .sep{color:color-mix(in srgb,var(--text) 55%,transparent)}
 .lede.dim{margin-bottom:28px;color:color-mix(in srgb,var(--text) 78%,transparent)}
 .news-list{margin:8px 0 0;display:flex;flex-direction:column;gap:12px}
 .news{margin:0;padding:18px 24px;background:var(--sage-100);color:var(--sage-900);border-radius:20px;font-size:16px;line-height:1.55;text-wrap:pretty}
@@ -127,7 +130,10 @@ footer{border-top:1px solid var(--divider);background:var(--surface)}
     <section class="hero">
       <img src="images/profile.png" alt="Diego Daruich" width="248" height="248">
       <div class="hero-text">
-                <p class="lede">Assistant Professor of Finance and Business Economics at the University of Southern California, Marshall School of Business.</p>
+        <ul class="lede roles">
+          <li><span class="role">Assistant Professor</span> <span class="sep">—</span> University of Southern California (Marshall)</li>
+          <li><span class="role">Associate Editor</span> <span class="sep">—</span> Journal of the European Economic Association</li>
+        </ul>
         <p class="lede dim">My research is in macroeconomics and labor economics, with a particular interest in human capital, education, and labor market policies.</p>
         <img src="images/universities.png" alt="USC Marshall, New York University, CEMFI, Universidad Torcuato di Tella" class="logos">
       </div>
